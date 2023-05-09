@@ -51,12 +51,12 @@ export default function Aniversario() {
     {
       id: '7',
       capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkPzjAXAq9TeV5p1yexZai7BRrRuzI4Q0Lsg&usqp=CAU',
-      titulo: "Aniversaio",
+      titulo: "Aniversario",
     },
     {
       id: '8',
       capa: 'https://i.pinimg.com/736x/40/f6/61/40f661d8a532486245c89b1b197046e5.jpg',
-      titulo: "Aniversaio",
+      titulo: "Aniversario",
     },
   ];
   return (
@@ -73,6 +73,7 @@ export default function Aniversario() {
     </View>
   );
 }
+
 
 
 

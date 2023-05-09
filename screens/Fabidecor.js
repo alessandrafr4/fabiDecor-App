@@ -9,13 +9,13 @@ function Fabidecor ({navigation}) {
       <Card style={styles.card}>
         <Card.Content>
           <Button mode="contained" onPress={() => navigation.navigate('Aniversario')}>
-            Aniversaio                        
+            Aniversario                        
           </Button>
         </Card.Content>
       </Card>
       <Card style={styles.card}>
         <Card.Content>
-          <Button mode="contained" onPress={() => navigation.navigate('Casamneto')}>
+          <Button mode="contained" onPress={() => navigation.navigate('Casamento')}>
             Casamento
           </Button>
         </Card.Content>
