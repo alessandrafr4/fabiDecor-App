@@ -41,13 +41,13 @@ function Fabidecor ({navigation}) {
           </Button>
         </Card.Content>
       </Card>   
-      <Card style={styles.card}>
+      {/* <Card style={styles.card}>
         <Card.Content>
           <Button mode="contained" onPress={() => navigation.navigate('Avaliacao')}>
             Avaliações 
           </Button>
         </Card.Content>
-      </Card>  
+      </Card>   */}
       <Card style={styles.card}>
         <Card.Content>
           <Button mode="contained" onPress={() => navigation.navigate('Categoria')}>

@@ -21,6 +21,7 @@ export default function ProdutoList({ navigation }) {
     await fetchProdutos();
     setRefreshing(false);
   }, []);
+  // produto.capa
 
   useEffect(() => {
     fetchProdutos();
@@ -33,17 +34,17 @@ export default function ProdutoList({ navigation }) {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
       >
-        {produtos.map((produto) => (
-          <Card style={styles.card} key={produto.nome}>
+        {produtos.map(produto => (
+          <Card style={styles.card} key={produto.id}>
             <Card.Content>
-              <Text variant="nameLarge">{produto.nome}</Text>
+              <Text variant="Large">{produto.nome}</Text>
               <Text variant="bodyMedium">
-                {produto.categoria} ({produto.tema})
+                {produto.categoria.descricao} - {produto.tema.nome}
               </Text>
             </Card.Content>
-            <Card.Cover
-              style={styles.cover}
-              source={{ uri: produto.cover.url }}
+            <Card.Capa
+              style={styles.capa}
+              source={{ uri: produto.capa?.url }}
             />
           </Card>
         ))}

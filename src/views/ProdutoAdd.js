@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-// import * as ImagesPicker from 'expo-image-picker';
-import { StyleSheet, Image, View, ScrollView } from 'react-native';
-import { Button, TextInput } from 'react-native-paper';
-// import { Dropdown } from 'react-native-element-dropdown';
-import { useTheme } from 'react-native-paper';
+import { useState, useEffect } from "react";
+import * as ImagePicker from "expo-image-picker";
+import { StyleSheet, Image, View, ScrollView } from "react-native";
+import { Button, TextInput } from "react-native-paper";
+import { Dropdown } from "react-native-element-dropdown";
+import { useTheme } from "react-native-paper";
 
-import temaService from '../services/temas';
-import imagesService from '../services/images';
-import produtosService from '../services/produtos';
+import temaService from "../services/temas";
+import imageService from "../services/images";
+import produtoService from "../services/produtos";
 
 export default function ProdutoAdd({ navigation }) {
   const theme = useTheme();
@@ -17,16 +17,16 @@ export default function ProdutoAdd({ navigation }) {
   const [selectedImage, setSelectedImage] = useState(null);
   const [file, setFile] = useState(null);
   const [produto, setProduto] = useState({
-    title: '',
-    year: '',
-    rating: '',
+    nome: "",
+    year: "",
+    // rating: "",
     tema: null,
   });
 
   const [temas, setTemas] = useState([]);
 
   const getTemas = async () => {
-    const data = await temasService.getAllTemas();
+    const data = await temaService.getAllTemas();
     setTemas(data);
   };
 
@@ -54,7 +54,7 @@ export default function ProdutoAdd({ navigation }) {
       setSelectedImage(result.assets[0].uri);
       setFile(result.assets[0]);
     } else {
-      alert('You did not select any image.');
+      alert("You did not select any image.");
     }
   };
 
@@ -79,21 +79,21 @@ export default function ProdutoAdd({ navigation }) {
           label="Nome"
           style={{ marginBottom: 10 }}
           onChangeText={(text) =>
-            setTemas((tema) => ({ ...tema, title: text }))
+            setProduto((produto) => ({ ...produto, nome: text }))
           }
         />
         <TextInput
           label="Quantidade"
           style={{ marginBottom: 10 }}
           onChangeText={(text) =>
-            setTemas((tema) => ({ ...tema, year: text }))
+            setproduto((produto) => ({ ...produto, year: text }))
           }
         />
         <TextInput
-          label="Precoo"
+          label="preco"
           style={{ marginBottom: 10 }}
           onChangeText={(text) =>
-            setTemas((tema) => ({ ...tema, rating: text }))
+            setProduto((produto) => ({ ...produto,  text }))
           }
         />
         <Dropdown
@@ -123,7 +123,7 @@ export default function ProdutoAdd({ navigation }) {
           maxHeight={300}
           labelField="name"
           valueField="id"
-          placeholder={isFocus ? '...' : 'Selecionar Gênero'}
+          placeholder={isFocus ? "..." : "Selecionar Um Tema"}
           value={produto.tema}
           onFocus={() => setIsFocus(true)}
           onBlur={() => setIsFocus(false)}
@@ -145,24 +145,24 @@ export default function ProdutoAdd({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   image: {
     width: 200,
     height: 200,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginBottom: 20,
   },
   dropdown: {
     height: 55,
-    borderBottomColor: '#000a',
+    borderBottomColor: "#000a",
     borderBottomWidth: 0.8,
     borderTopRadius: 4,
     paddingHorizontal: 8,
   },
   placeholderStyle: {
     fontSize: 14,
-    color: '#000a',
+    color: "#000a",
   },
   selectedTextStyle: {
     fontSize: 16,
@@ -172,8 +172,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   buttons: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    flexDirection: "row",
+    justifyContent: "space-around",
     marginTop: 20,
     marginBottom: 20,
   },
