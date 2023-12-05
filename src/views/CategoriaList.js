@@ -47,7 +47,7 @@ export default function CategoriaAdd({ navigation }) {
         <Button
           icon="plus-box"
           mode="elevated"
-          onPress={() => navigation.navigate("CategoriaAdd")}
+          onPress={() => navigation.navigate("categoriaAdd")}
         >
           Adicionar
         </Button>

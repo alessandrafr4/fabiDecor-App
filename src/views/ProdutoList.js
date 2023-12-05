@@ -42,9 +42,9 @@ export default function ProdutoList({ navigation }) {
                 {produto.categoria.descricao} - {produto.tema.nome}
               </Text>
             </Card.Content>
-            <Card.Capa
+            <Card.Cover
               style={styles.capa}
-              source={{ uri: produto.capa?.url }}
+              source={{ uri: produto.capa?.file }}
             />
           </Card>
         ))}
@@ -59,16 +59,19 @@ export default function ProdutoList({ navigation }) {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center"
+    justfyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 10,
+    backgroundColor: '#C22C4C4',
   },
-  buttons: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    width: "70%",
+  
+  card: {
+    backgroundColor: '#600fab',
+    width: '90%',
+    height: 250,
+    margin: 19,
   },
 });
