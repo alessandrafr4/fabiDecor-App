@@ -83,10 +83,10 @@ export default function ProdutoAdd({ navigation }) {
           }
         />
         <TextInput
-          label="Quantidade"
+          label="quantidade"
           style={{ marginBottom: 10 }}
           onChangeText={(text) =>
-            setproduto((produto) => ({ ...produto, year: text }))
+            setProduto((produto) => ({ ...produto, year: text }))
           }
         />
         <TextInput

@@ -60,8 +60,9 @@ export default function CategoriaAdd({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#b6a7ff',
     alignItems: "center"
+    
   },
   buttons: {
     flexDirection: "row",

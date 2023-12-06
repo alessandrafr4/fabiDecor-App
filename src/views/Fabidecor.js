@@ -78,13 +78,14 @@ function Fabidecor ({navigation}) {
 
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: DefaultTheme.colors.background,
-    paddingTop: 20
+    backgroundColor: '#b6a7ff',
+    paddingTop: 170
   },
   card: {
-    width: '100%',
+    width: '80%',
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+    paddingTop: 10,
   }
 });
 

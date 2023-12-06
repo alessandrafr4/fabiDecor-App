@@ -47,7 +47,7 @@ export default function TemaAdd({ navigation }) {
         <Button
           icon="plus-box"
           mode="elevated"
-          onPress={() => navigation.navigate("TemaAdd")}
+          onPress={() => navigation.naviganomete("TemaAdd")}
         >
           Adicionar
         </Button>
@@ -60,9 +60,10 @@ export default function TemaAdd({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center"
+    backgroundColor: '#b6a7ff',
+    alignItems: "center",
   },
+  
   buttons: {
     flexDirection: "row",
     justifyContent: "space-around",

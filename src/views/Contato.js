@@ -44,8 +44,10 @@ export default function Contato() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: DefaultTheme.colors.background,
+    flex: 1,
+    backgroundColor: '#b6a7ff',
     paddingTop: 30
+
   },
   card: {
     flexDirection: 'row',

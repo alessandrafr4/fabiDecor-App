@@ -38,6 +38,8 @@ export default function ProdutoList({ navigation }) {
           <Card style={styles.card} key={produto.id}>
             <Card.Content>
               <Text variant="Large">{produto.nome}</Text>
+              <Text variant="Large">{produto.quantidade}</Text>
+              <Text variant="Large">{produto.preco}</Text>
               <Text variant="bodyMedium">
                 {produto.categoria.descricao} - {produto.tema.nome}
               </Text>
@@ -64,14 +66,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justfyContent: 'center',
     alignItems: 'center',
-    paddingTop: 10,
-    backgroundColor: '#C22C4C4',
+    paddingTop: 1,
+    backgroundColor: '#b6a7ff',
   },
   
   card: {
-    backgroundColor: '#600fab',
+    backgroundColor: '#8738d1',
     width: '90%',
-    height: 250,
-    margin: 19,
+    height: 295,
+    margin: 35,
   },
 });
